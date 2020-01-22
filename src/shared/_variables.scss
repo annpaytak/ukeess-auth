@@ -1,0 +1,76 @@
+$white : #FFF;
+$white-half-opacity: rgba(255, 255, 255, 0.5);
+$white-dim : rgba(255, 255, 255, 0.3);
+
+$black : rgba(0, 0, 0, 1);//#000;
+$black-half-opacity: rgba(0, 0, 0, 0.5);
+$black-dim : rgba(0, 0, 0, 0.3);
+
+$bg-light: #f15a3a;
+$border: #e1ddda;
+$bg-dark: #201f1d;
+$bg-shadow: #dcdcdc;
+$back: #e5e5e5;
+$main-back: #f7f2ef;
+
+$text-gray: #4f4f4f;
+
+$green: #07da63;
+
+$border-size-reg: 1.4px;
+
+.header-text{
+  font-size: 1.95rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  line-height: 20px;
+  color: $text-gray;
+  margin: 1em;
+}
+
+.icon-button{
+  border: none !important;
+  padding-left: 12px !important;
+  width: 100px !important;
+  background-color: transparent;
+
+  opacity: .7;
+}
+
+.outlined-button{
+  padding: 4px 12px 4px 32px;
+  border-radius: 3px;
+  border: $border-size-reg solid $bg-dark;
+  background-color: transparent;
+
+  height: 100%;
+  width: 100%;
+  width: 125px;
+  max-height: 35px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  opacity: .7;
+}
+
+.outlined-button:hover, .icon-button:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.outlined-button:active{
+  transform: translateY(1px);
+}
+
+.search-actions{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.form-actions{
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}

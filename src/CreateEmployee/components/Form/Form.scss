@@ -1,0 +1,23 @@
+@import '../../../shared/variables';
+
+// $bg-light
+// $bg-dark
+
+.form-wrapper{
+  background-color: $back;
+  // border-radius: 10px;
+  // box-shadow: 0px 10px 10px 0px $bg-shadow;
+  width: 25%;
+  height: 100%;
+  form{
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    .form-actions{
+      button{
+        border: $border-size-reg solid $green;
+        color: $green;
+      }
+    }
+  }
+}
