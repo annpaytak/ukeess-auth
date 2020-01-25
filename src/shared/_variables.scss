@@ -1,20 +1,8 @@
 $white : #FFF;
-$white-half-opacity: rgba(255, 255, 255, 0.5);
-$white-dim : rgba(255, 255, 255, 0.3);
-
-$black : rgba(0, 0, 0, 1);//#000;
-$black-half-opacity: rgba(0, 0, 0, 0.5);
-$black-dim : rgba(0, 0, 0, 0.3);
-
-$bg-light: #f15a3a;
-$border: #e1ddda;
-$bg-dark: #201f1d;
-$bg-shadow: #dcdcdc;
-$back: #e5e5e5;
-$main-back: #f7f2ef;
-
-$text-gray: #4f4f4f;
-
+$white-half-opacity: #93a5b3;
+$border: #232427;
+$bg-dark: #071535;
+$main-back: #9fb5c2;
 $green: #07da63;
 
 $border-size-reg: 1.4px;
@@ -24,7 +12,7 @@ $border-size-reg: 1.4px;
   font-weight: 600;
   letter-spacing: .5px;
   line-height: 20px;
-  color: $text-gray;
+  color: $bg-dark;
   margin: 1em;
 }
 
@@ -33,7 +21,8 @@ $border-size-reg: 1.4px;
   padding-left: 12px !important;
   width: 100px !important;
   background-color: transparent;
-
+  display: flex;
+  justify-content: center;
   opacity: .7;
 }
 

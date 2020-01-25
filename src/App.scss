@@ -38,21 +38,24 @@ th{
 td{
   text-align: center;
   border: 1px solid $border;
-  // background-color: $bg-light;
 }
 
 svg{
-  // margin: 10px 5px 5px 5px;
   height: 20px;
   width: 20px;
 }
 
 input, select{
+  color: $bg-dark;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $bg-dark;
   margin: 6px 0;
   font: 400 1rem 'Poppins';
+}
+
+input::placeholder{
+  color: $bg-dark;
 }
 
 button{
@@ -61,6 +64,11 @@ button{
 
 select:focus, input:focus, button:focus{
   outline: none;
+}
+
+.icon-button:disabled{
+  cursor: default;
+  opacity: .5;
 }
 
 .App{

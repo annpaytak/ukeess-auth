@@ -2,9 +2,7 @@ import { createStore, Store, applyMiddleware, combineReducers } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 
 import { authReducer, AuthState, authSaga } from '../Auth'
-import { employeeReducer, EmployeeState, fetchSaga } from '../CreateEmployee'
-// import rootSaga from '../actions/sagas';
-// import rootReducer from './Reducers';
+import { employeeReducer, EmployeeState, fetchSaga } from '../Employees'
 
 const sagaMiddleware = createSagaMiddleware();
 

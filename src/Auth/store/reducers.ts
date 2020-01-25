@@ -2,9 +2,6 @@ import { Reducer } from 'redux'
 
 import {
   AuthState, AuthActionTypes,
-  USER_SIGNUP_REQUEST,
-  USER_SIGNUP_SUCCESS,
-  USER_SIGNUP_ERROR,
   USER_SIGNIN_REQUEST,
   USER_SIGNIN_SUCCESS,
   USER_SIGNIN_ERROR,
@@ -16,7 +13,6 @@ import {
 const initialState: AuthState = {
   id: null,
   email: null,
-  signupLoading: false,
   signinLoading: false,
   signoutLoading: false,
 }
@@ -24,23 +20,6 @@ const initialState: AuthState = {
 export const authReducer: Reducer<AuthState, AuthActionTypes> = (state: AuthState = initialState, action: AuthActionTypes): AuthState => {
   console.log(action);
   switch (action.type) {
-    case USER_SIGNUP_REQUEST:
-      return {
-        ...state,
-        signupLoading: true
-      }
-    case USER_SIGNUP_SUCCESS:
-      return {
-        ...state,
-        signupLoading: false,
-        id: action.payload
-      }
-    case USER_SIGNUP_ERROR:
-      return {
-        ...state,
-        signupLoading: false,
-        // Also payload is type string with error message so we can use it to show message to user
-      }
     case USER_SIGNIN_REQUEST:
       return {
         ...state,

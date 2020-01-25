@@ -1,9 +1,8 @@
 // This module responsible for signup/signin/signout
 
-export * from './components/Signup'; // Signup component
-export * from './components/Signin'; // Signin component
-// export * from './components/SigninGoogle'; // SigninGoogle component
-export * from './components/Signout'; // Signin component
+export * from './components/Signin'; // Signin Google component
+
+export { AuthService } from './services/auth.service';
 
 export * from './store/actions';
 export * from './store/reducers';

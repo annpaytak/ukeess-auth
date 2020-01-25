@@ -1,9 +1,6 @@
 import { ActionCreator } from "redux"
 
 import {
-  UserSignupRequestAction, USER_SIGNUP_REQUEST,
-  UserSignupSuccessAction, USER_SIGNUP_SUCCESS,
-  UserSignupErrorAction, USER_SIGNUP_ERROR,
   UserSigninRequestAction, USER_SIGNIN_REQUEST,
   UserSigninSuccessAction, USER_SIGNIN_SUCCESS,
   UserSigninErrorAction, USER_SIGNIN_ERROR,
@@ -12,29 +9,8 @@ import {
   UserSignoutErrorAction, USER_SIGNOUT_ERROR,
 } from './types'
 
-import { UserSignupRequest } from '../models/user-signup-request'
 import { UserSigninRequest } from '../models/user-signin-request'
 
-export const userSignupRequest: ActionCreator<UserSignupRequestAction> = (request: UserSignupRequest): UserSignupRequestAction => {
-  return {
-    type: USER_SIGNUP_REQUEST,
-    payload: request
-  };
-}
-
-export const userSignupSuccess: ActionCreator<UserSignupSuccessAction> = (id: string): UserSignupSuccessAction => {
-  return {
-    type: USER_SIGNUP_SUCCESS,
-    payload: id
-  };
-}
-
-export const userSignupError: ActionCreator<UserSignupErrorAction> = (error: string): UserSignupErrorAction => {
-  return {
-    type: USER_SIGNUP_ERROR,
-    payload: error
-  };
-}
 
 export const userSigninRequest: ActionCreator<UserSigninRequestAction> = (request: UserSigninRequest): UserSigninRequestAction => {
   return {

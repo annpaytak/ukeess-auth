@@ -5,19 +5,19 @@ import {
   FETCH_EMPLOYEES_REQUEST,
   FETCH_EMPLOYEES_SUCCESS,
   FETCH_EMPLOYEES_ERROR,
-
-  // CREATE_EMPLOYEE_REQUEST,
-  // CREATE_EMPLOYEE_SUCCESS,
-  // CREATE_EMPLOYEE_ERROR
   CREATE_EMPLOYEE,
-  REMOVE_EMPLOYEE
+  REMOVE_EMPLOYEE,
+  SEARCH_EMPLOYEE_REQUEST,
+  SEARCH_EMPLOYEE_SUCCESS,
+  SEARCH_EMPLOYEE_ERROR
 } from './types'
 
 const initialState: EmployeeState = {
-  employee: null,
+  employee: undefined,
   data: [],
   fetchLoading: false,
-  id: undefined
+  id: undefined,
+  name: undefined
 }
 
 export const employeeReducer: Reducer<EmployeeState, EmployeeActionTypes> = (state: EmployeeState = initialState, action: EmployeeActionTypes): EmployeeState => {
@@ -51,6 +51,21 @@ export const employeeReducer: Reducer<EmployeeState, EmployeeActionTypes> = (sta
         id: action.payload
         // Also payload is type string with error message so we can use it to show message to user
       }
+      case SEARCH_EMPLOYEE_REQUEST:
+        return {
+          ...state,
+          name: action.payload
+        }
+      case SEARCH_EMPLOYEE_SUCCESS:
+        return {
+          ...state,
+          employee: action.payload
+        }
+      case SEARCH_EMPLOYEE_ERROR:
+        return {
+          ...state,
+          // Also payload is type string with error message so we can use it to show message to user
+        }
     default:
       return state;
   }

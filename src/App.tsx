@@ -3,8 +3,10 @@ import { Provider } from 'react-redux'
 
 import store from './store'
 
-import { Form as NewEmployeeForm } from './CreateEmployee'
-import { Table as EmployeesTable } from './EmployeesTable'
+import {
+  Form as NewEmployeeForm,
+  Table as EmployeesTable
+} from './Employees'
 import { Signin } from './Auth'
 
 import './App.scss'

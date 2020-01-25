@@ -33,6 +33,10 @@ class Signin extends Component<SigninContainerProps, {}> {
     email: null
   }
 
+  componentDidMount(){
+    this.props.signin();
+  }
+
   render() {
     return (
       <div>

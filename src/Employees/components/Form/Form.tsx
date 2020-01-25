@@ -46,18 +46,6 @@ class Form extends Component<FormContainerProps, FormContainerState> {
     const dateOfHire = this.state.dateOfHire;
 
     const employeeToCreate = {
-      // name: 'Elizabeth Johnson',
-      // company: 'JustAnswer',
-      // position: 'Chief Information Officer (CIO)',
-      // dateOfHire: '10/12/2018'
-      // name: 'Jon Doe',
-      // company: 'TechMagic',
-      // position: 'Project Manager (PM)',
-      // dateOfHire: '05/02/2019'
-      // name: 'Joshua Hildy',
-      // company: 'Logivations',
-      // position: 'Cloud Architect',
-      // dateOfHire: '01/02/2017'
       name: name,
       company: company,
       position: position,
@@ -130,33 +118,3 @@ function mapDispatchToProps(dispatch: Dispatch): FormContainerProps {
 }
 
 export const FormConnected = connect(null, mapDispatchToProps)(Form);
-///////////////////////////////////////////////////////////////////////
-// import React, { Component } from "react";
-// import { connect } from "react-redux";
-// import { completeToDo } from "../actions";
-
-// class ToDoListItem extends Component {
-//   handleCompleteClick = completeToDoId => {
-//     const { completeToDo } = this.props;
-//     completeToDo(completeToDoId);
-//   };
-
-//   render() {
-//     const { todoId, todo } = this.props;
-//     return (
-//       <div key="toDoName" className="col s10 offset-s1 to-do-list-item teal">
-//         <h4>
-//           {todo.title}{" "}
-//           <span
-//             onClick={() => this.handleCompleteClick(todoId)}
-//             className="complete-todo-item waves-effect waves-light teal lighten-5 teal-text text-darken-4 btn"
-//           >
-//             <i className="large material-icons">done</i>
-//           </span>
-//         </h4>
-//       </div>
-//     );
-//   }
-// }
-
-// export default connect(null, { completeToDo })(ToDoListItem);
